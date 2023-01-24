@@ -11,7 +11,7 @@ import (
 
 func main() {
 	viper.SetConfigFile(".env")
-	viper.ReadConfig()
+	viper.ReadInConfig()
 	apiKey := viper.GetString("API_KEY")
 	if apiKey == "" {
 		panic("API KEY Missing")
